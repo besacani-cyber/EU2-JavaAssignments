@@ -1,0 +1,24 @@
+package assignments.assignment_09;
+
+import java.util.Scanner;
+
+public class Question_07 {
+
+	public static void main(String[] args) {
+		
+//		Write a program that will print out the first half of the word twice.
+//		Sample Output:
+//	     input: java
+//	     output: jaja
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please enter the word : ");
+		String word = input.nextLine();
+		input.close();
+		
+		System.out.print(word + " ==> ");		
+		System.out.print(word.substring(0,2) + word.substring(0,2));
+
+	}
+
+}
