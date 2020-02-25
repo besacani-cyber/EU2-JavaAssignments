@@ -33,6 +33,7 @@ public class Question_08 {
 		input.close();
 		
 		mail = mail.toLowerCase();
+		System.out.println();
 		
 		if (mail.contains("alejandro")) {
 			System.out.println("Read this mail");

@@ -23,11 +23,15 @@ public class Question_10 {
 		input.close();
 		
 		String[] array1 = email.split("@");		
-		String[] array2 = array1[0].split("_");		
+		String[] array2 = array1[0].split("_");	
+		
+		String name = array2[0].substring(0,1).toUpperCase() + array2[0].substring(1,array2[0].length());
+		String surname = array2[1].substring(0,1).toUpperCase() + array2[1].substring(1,array2[1].length());
+	
 		String[] array3 = array1[1].split("\\.");
 		
-		System.out.println("First name       : " + array2[0]);
-		System.out.println("Last name        : " + array2[1]);
+		System.out.println("First name       : " + name);
+		System.out.println("Last name        : " + surname);
 		System.out.println("Domain           : " + array3[0]);
 		System.out.println("Top-Level Domain : " + array3[1]);
 

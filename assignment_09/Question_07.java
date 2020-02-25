@@ -16,8 +16,8 @@ public class Question_07 {
 		String word = input.nextLine();
 		input.close();
 		
-		System.out.print(word + " ==> ");		
-		System.out.print(word.substring(0,2) + word.substring(0,2));
+		System.out.print(word + " ==> ");
+		System.out.print(word.substring(0,(word.length()/2)) + word.substring(0,(word.length()/2)));
 
 	}
 

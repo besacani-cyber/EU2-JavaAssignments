@@ -49,7 +49,7 @@ public class Question_03 {
 			System.out.print(word + " ==> " + word.charAt((word.length()/2)));
 		}
 		
-		if (word.length()%2==0 && word.length()>=2) {
+		if (word.length()%2==0 && word.length()>2) {
 			System.out.print(word + " ==> " + word.charAt(word.length()/2-1) + word.charAt(word.length()/2));
 		}		
 

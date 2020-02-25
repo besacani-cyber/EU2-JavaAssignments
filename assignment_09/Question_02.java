@@ -61,7 +61,7 @@ public class Question_02 {
 //		Display message: Laptop price is: $550.0
 		
 		boolean flag = false;
-		int laptopPrice = 0;
+		double laptopPrice = 0;
 		double screenSize = 0;
 		String cpuType = "";
 		String storageType = "";
@@ -103,6 +103,9 @@ public class Question_02 {
 			}
 		}
 		
+		System.out.println("Laptop Price .............. : " + laptopPrice);
+		System.out.println();
+		
 		flag = false;
 		
 		// CPU type selection
@@ -137,6 +140,9 @@ public class Question_02 {
 			}
 		}
 		
+		System.out.println("Laptop Price .............. : " + laptopPrice);
+		System.out.println();
+		
 		flag = false;
 		
 		// RAM size selection
@@ -145,6 +151,9 @@ public class Question_02 {
 		ramSize = input.nextInt();
 		System.out.println();
 		laptopPrice = laptopPrice + (50 * ramSize/4);
+		
+		System.out.println("Laptop Price .............. : " + laptopPrice);
+		System.out.println();
 		
 		// Memory size selection
 		
@@ -181,6 +190,9 @@ public class Question_02 {
 			
 		}
 		
+		System.out.println("Laptop Price .............. : " + laptopPrice);
+		System.out.println();
+		
 		flag = false;
 
 		// Screen resolution selection
@@ -210,6 +222,9 @@ public class Question_02 {
 			
 		}
 		
+		System.out.println("Laptop Price .............. : " + laptopPrice);
+		System.out.println();
+		
 		input.close();
 		
 		System.out.println("Screen Size ............... : " + screenSize);
@@ -218,6 +233,7 @@ public class Question_02 {
 		System.out.println("Storage Type .............. : " + storageType);
 		System.out.println("Memory Size ............... : " + memorySize);
 		System.out.println("Screen Resolution ......... : " + screenResolution);
+		System.out.println();
 		System.out.println("Laptop Price .............. : " + laptopPrice);
 
 	}
