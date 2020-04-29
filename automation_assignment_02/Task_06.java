@@ -13,8 +13,8 @@ public class Task_06 {
 
         WebDriver driver = WebDriverFactory.getDriver("chrome");
 
-//      Step 1. Go to "https://www.tempmailaddress.com/"
-        driver.get("https://www.tempmailaddress.com/");
+//      Step 1. Go to "https://www.tempmailaddress.com"
+        driver.get("https://www.tempmailaddress.com");
 
 //      Step 2. Copy and save email as a string.
         String email = driver.findElement(By.id("email")).getText();
@@ -45,19 +45,19 @@ public class Task_06 {
         Thread.sleep(5000);
 
 //      Step 10. Verify that you’ve received an email from “do-not-reply@practice.cybertekschool.com”
-//        String expectedResult2 = "do-not-reply@practice.cybertekschool.com";
-//        String actualResult2 = driver.findElement(By.xpath("//td[contains(.,' do-not-reply@practice.cybertekschool.com')]")).getText();
-//        System.out.println(actualResult2);
-//        System.out.println("exp: " + expectedResult2);
-//        System.out.println("act: " + actualResult2);
-        //Assert.assertEquals(actualResult2,expectedResult2,"verifying the mail is in the box");
+        String expectedResult2 = "do-not-reply@practice.cybertekschool.com";
+        String actualResult2 = driver.findElement(By.xpath("(//td[contains(.,'do-not-reply@practice.cybertekschool.com')])[1]")).getText().trim();
+        System.out.println(actualResult2);
+        System.out.println("exp: " + expectedResult2);
+        System.out.println("act: " + actualResult2);
+        Assert.assertEquals(actualResult2,expectedResult2,"verifying the mail is in the box");
 
 //      Step 11. Click on that email to open it.
         driver.findElement(By.xpath("//td[contains(.,' do-not-reply@practice.cybertekschool.com')]")).click();
 
 //      Step 12. Verify that email is from: “do-not-reply@practice.cybertekschool.com”
         String expectedResult3 = "do-not-reply@practice.cybertekschool.com";
-        String actualResult3 = driver.findElement(By.id("odesilatel")).getText();
+        String actualResult3 = driver.findElement(By.id("odesilatel")).getText().trim();
         Assert.assertEquals(actualResult3,expectedResult3,"verifying the mail is from Cybertek");
 
 //      Step 13. Verify that subject is: “Thanks for subscribing to practice.cybertekschool.com!”
